@@ -1,0 +1,27 @@
+$white-color: #fff;
+$black-color: #000;
+$text-color: #333;
+$primary-color: #ee4d2d;
+$border-color: #dbdbdb;
+$star-gold-color: #ffce3e;
+
+$grow-from: .7;
+$grow-to: 1;
+
+$header-height-PC: 120px;
+$nav-height-PC: 34px; 
+$header-with-search-height-PC: calc(#{$header-height-PC} - #{$nav-height-PC});
+
+$header-height-MT: 68px;
+$nav-height-MT: 0px; 
+$header-with-search-height-MT: calc(#{$header-height-MT} - #{$nav-height-MT});
+
+$header-height-M: 54px;
+$nav-height-M: 0px; 
+$header-with-search-height-M: calc(#{$header-height-M} - #{$nav-height-M});
+
+// $header-height-T: 120px;
+// $nav-height-T: 34px; 
+// $header-with-search-height-T: calc(#{$header-height} - #{$nav-height});
+
+$header-sort-bar-height-MT: 46px;

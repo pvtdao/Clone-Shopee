@@ -1,0 +1,52 @@
+.select-input{
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: $white-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+
+    &:hover &__list{
+        display: block;
+    }
+
+    &__label{
+        font-size: 1.4rem;
+    }
+
+    &__icon{
+        font-size: 1.4rem;
+        color: #adadad;
+        position: relative;
+        top: 1px;
+    }
+
+    &__list{
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 25px;
+        border-radius: 2px;
+        background-color: $white-color;
+        padding: 8px 16px;
+        list-style: none;
+    }
+
+    &__link{
+        font-size: 1.4rem;
+        color: $text-color;
+        text-decoration: none;
+        display: block;
+        padding: 4px 0;
+
+        &:hover{
+            color: $primary-color;
+        }
+    }
+    
+}

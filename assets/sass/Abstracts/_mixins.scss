@@ -1,0 +1,120 @@
+@mixin responsive ($breakpoint) {
+    @if $breakpoint == Mobile {
+        @media (max-width: 739px){
+            @content;
+        }
+    }
+
+    @if $breakpoint == MobileTablet {
+        @media (max-width: 1023px){
+            @content
+        };
+    }  
+
+    @if $breakpoint == Tablet {
+        @media (min-width: 740px) and (max-width: 1023px){
+            @content;
+        };
+    }
+}
+
+// @mixin  topBasedOnHeader() {
+//     @media (min-width: 1023px){
+//         top: calc(100% + 8px);
+//     }
+
+//     //Mobile and Tablet
+//     @media (max-width: 1023px){
+//         top: 68px;
+//     };
+    
+//     //Tablet
+//     @media (min-width: 740px) and (max-width: 1023px){
+        
+//     };
+
+//     //Mobile
+//     @media (max-width: 739px){
+        
+//     }
+// }
+
+// @mixin header-height ($name-prop , $value: 0) {
+//     //PC
+//     @media (min-width: 1023px){
+//         @if $name-prop == height {
+//             #{$name-prop}: 120px;
+//         }
+//     }
+
+//     //Mobile and Tablet
+//     @media (max-width: 1023px){
+//         #{$name-prop}: 68px;
+//     };
+    
+//     //Tablet
+//     // @media (min-width: 740px) and (max-width: 1023px){
+        
+//     // };
+
+//     //Mobile
+//     // @media (max-width: 739px){
+        
+//     // }
+
+    
+// }
+
+// @mixin nav-height () {
+//     @media (min-width: 1023px){
+//         height: 34px;
+//     }
+
+//      //Mobile and Tablet
+//      @media (max-width: 1023px){
+//         height: 0;
+//     };
+    
+//     // //Tablet
+//     // @media (min-width: 740px) and (max-width: 1023px){
+        
+//     // };
+
+//     // //Mobile
+//     // @media (max-width: 739px){
+        
+//     // }
+// }
+
+// @mixin header-with-search-height (){
+//     @media (min-width: 1023px){
+//         $header-height: 120px;
+//         $nav-height: 34px;
+//         $header-with-search-height: calc(#{$header-height} - #{$nav-height});
+//         height: $header-with-search-height;
+//     }
+
+//      //Mobile and Tablet
+//      @media (max-width: 1023px){
+//         $header-height: 68px;
+//         $nav-height: 0px;
+//         $header-with-search-height: calc(#{$header-height} - #{$nav-height});
+//         height: $header-with-search-height;
+//     };
+
+//     // //Tablet
+//     // @media (min-width: 740px) and (max-width: 1023px){
+        
+//     // };
+
+//     // //Mobile
+//     // @media (max-width: 739px){
+        
+//     // }
+// }
+
+// @mixin header-sort-bar-height($name-proc: height) {
+//     @media (max-width: 1023px){
+//         #{$name-proc}: 46px;
+//     };
+// }

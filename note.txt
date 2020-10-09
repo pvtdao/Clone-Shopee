@@ -1,0 +1,38 @@
+-một thằng có position và 1 thằng k có position thì không ngang cấp => Muốn z-index thì phải ngang cấp nhau
+-Tạo 1 thằng modal:
+    +Tạo 1 modal (div) chiếm hết màn hình (fixed và t,r,b,left: 0)
+    +Tạo 1 lớp overlay phía sau để phủ
+    +Tạo 1 body
+
+box-shadow: x y blur color;
+    x là độ bóng đổ theo trục x
+    y là độ bóng đổ theo trục y
+    blur là độ mờ của bóng
+    color là màu của bóng
+
+2 class kế bên mà dùng & không được thì dùng cú pháp sau:
+     &--liked#{&}-icon-fill{
+            display: block;
+        }
+
+    //Vậy sẽ bị lỗi
+     &--liked&-icon-fill{
+            display: block;
+        }
+
+Sử dụng chung color, sử dụng từ khóa currentColor
+Filter để chỉnh các giá trị của nó
+
+
+div có display block là mặc định còn a thì k có
+
+selector:not(...): CSS cho tất cả chỉ trừ thằng ... trong ngoặc
+	VD: div:not(:last-child){ mgb: 10px}
+	mgb = 10 cho tất cả div trừ thằng div cuối cùng
+
+Calc mà truyền biến vào thì phải để trong #{}.
+	VD: calc(100% - #{$biến-gì-đó})
+
+top: 50% => 50% của thằng chứa nó
+transform: translateY(-50%); => Lấy chiều cao của chính nó 
+

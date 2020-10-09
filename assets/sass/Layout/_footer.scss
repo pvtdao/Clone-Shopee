@@ -1,0 +1,101 @@
+.footer{
+    padding-top: 16px;
+    border-top: 4px solid $primary-color;
+
+    &__content{
+
+        @include responsive (Mobile) {
+            padding: 0 16px;
+        }
+    }
+
+    &__heading{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: $text-color;
+
+        @include responsive (Mobile) {
+            text-align: center;
+        }
+    }
+
+    &__list{
+        padding-left: 0;
+        list-style: none;
+
+        &-item{
+
+            &-link{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                font-size: 1.2rem;
+                color: #737373;
+                padding: 2px 0;
+
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+
+            &-icon{
+                font-size: 1.6rem;
+                margin: -1px 8px 0 0;
+            }
+        }
+    }
+
+    &__download{
+        display: flex;
+
+        @include responsive (Mobile) {
+            justify-content: center;
+        }
+
+        &-QR{
+            width: 80px;
+            height: 80px;
+            border: 1px solid $border-color;
+        }
+
+        &-app{
+            flex: 1;
+            margin-left: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include responsive (Mobile) {
+                flex: unset;
+            }
+
+            &-link{
+                text-decoration: none;
+                color: transparent;
+
+                @include responsive (Mobile) {
+                    display: block;
+                    padding: 6px 8px;
+                }
+            }
+
+            &-img{
+                height: 16px;
+            }
+        }
+    }
+
+    &__bottom{
+        background-color: #f5f5f5;
+        padding: 12px 0;
+        margin-top: 36px;
+    }
+
+    &__copy-right{
+        margin: 0;
+        font-size: 1.2rem;
+        text-align: center;
+        color: #737373;
+    }
+}

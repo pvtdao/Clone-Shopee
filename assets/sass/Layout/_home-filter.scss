@@ -1,0 +1,284 @@
+.app__content{
+    padding-top: 36px;
+
+    @include responsive (Mobile) {
+        margin: 0 4px;
+    }
+
+    @include responsive (MobileTablet){
+        padding-top: 8px;
+    }
+}
+
+.home-filter{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, .04);
+
+    &__label{
+        color: #555;
+        font-size: 1.4rem;
+        margin-right: 12px;
+    }
+
+    &__btn{
+        margin-right: 12px;
+        background-color: #fff;
+    }
+    
+    &__paging{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        &-num{
+            font-size: 1.5rem;
+            color: $text-color;
+            margin-right: 22px;
+        
+            &-current{
+                color: $primary-color;
+            }
+        }
+
+        &-control{
+            border-radius: 2px;
+            width: 72px;
+            height: 36px;
+            display: flex;
+
+            &-btn{
+                flex: 1;
+                display: flex;
+                // align-items: center;
+                // justify-content: center;
+                background-color: $white-color;
+                text-decoration: none;
+
+                &:first-child{
+                    border-left: 1px solid #eee;
+                }
+
+                & i{
+                    margin: auto;
+                    font-size: 1.4rem;
+                    color: #555;
+                }
+
+                &--disable{
+                    background-color: #f9f9f9;
+                    cursor: default;
+
+                    & i{
+                        color: #ccc;
+                    }
+                }
+
+                
+            }
+        }
+    }
+}
+
+.home-product{
+    margin-bottom: 10px;
+
+    &__pagingnation{
+        margin-top: 50px;
+        margin-bottom: 32px;
+        padding-left: 0;
+    }
+}
+
+.product-item{
+    display: block;
+    text-decoration: none;
+    background-color: $white-color;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    transition: transform ease-in .1s;
+    will-change: transform;
+
+    &:hover{
+        transform: translateY(-1px);
+        box-shadow: 0 1px 20px rgba(0, 0, 0, .05);
+    }
+
+    &__img{
+        padding-top: 100%;
+        margin-top: 10px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top center;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        // border: 1px solid #000;
+    }    
+
+    &__name{
+        font-size: 1.4rem;
+        font-weight: 500;
+        // height: 3.6rem;
+        color: $text-color;
+        line-height: 1.8rem;
+        margin: 10px 10px 6px 10px;
+        display: block;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+
+    &__price{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+
+        &--old{
+            font-size: 1.4rem;
+            color: #666;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+
+        &--new{
+            font-size: 1.6rem;
+            color: $primary-color;
+            margin-left: 10px;
+        }
+    }
+
+    &__action{
+        display: flex;
+        justify-content: space-between;
+        margin: 6px 10px 0;
+    }
+
+    &__like{
+        font-size: 1.3rem;
+
+        &-icon-fill.fa{
+            display: none;
+        }
+
+        &--liked &-icon-fill{
+            display: inline-block;
+            color: $primary-color;
+        }
+
+        &--liked &-icon-empty{
+            display: none;
+        }
+    }
+
+    &__rate{
+        font-size: .9rem;
+        // color: #d5d5d5;
+        margin: -1px 0 0 auto;
+        
+
+        &--gold{
+            color: $star-gold-color;
+        }
+    }
+
+    &__sold{
+        font-size: 1.2rem;
+        color: $text-color;
+        margin-left: 6px;
+    }
+
+    &__origin{
+        display: flex;
+        // justify-content: space-between;
+        margin: 3px 10px 0 10px;
+        color: #595959;
+        font-weight: 300;
+        font-size: 1.2rem;
+
+        &-brand{
+            margin-right: auto;
+        }
+    }
+
+    &__favorite{
+        position: absolute;
+        top: 10px;
+        left: -4px;
+        color: $primary-color;
+        background-color: currentColor;
+        font-size: 1.2rem;
+        font-size: 500;
+        line-height: 1.6rem;
+        padding-right: 4px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+
+        &:after{
+            content: "";
+            position: absolute;
+            left: 0;
+            // top: 100%;
+            bottom: -3px;
+            border-top: 3px solid currentColor;
+            border-left: 3px solid transparent;
+            filter: brightness(60%);
+        }
+
+        & span{
+            color: $white-color;
+        }
+
+        & i{
+            color: $white-color;
+            font-size: .9rem;
+            margin: 0 2px 0 5px;
+        }
+    }
+
+    &__sale-off{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 36px;
+        text-align: center;
+        background-color: rgba(255, 216, 64, .94);
+        border-top-right-radius: 2px;
+        
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            border-style: solid;
+            border-width: 0 20px 4px 20px;
+            color: rgba(255, 216, 64, .94);
+            border-color: transparent currentColor transparent currentColor;
+        }
+
+        &-percent{
+            color: #ee4d2d;
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            position: relative;
+            top: -1px;
+        }
+
+        &-label{
+            position: relative;
+            top: -10px;
+            color: $white-color;
+            font-size: 1.3rem;
+            line-height: 1.3rem;
+            font-weight: 600;
+
+         
+        }
+    }
+}

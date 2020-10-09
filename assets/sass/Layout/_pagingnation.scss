@@ -1,0 +1,40 @@
+.pagingnation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+    &-item{
+        margin: 0 12px;
+        font-size: 1.4rem;
+        margin: 0;
+
+        &__link{
+            $height: 30px;
+            display: block;
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: 300;
+            color: #939393;
+            min-width: 40px;
+            height: $height;
+            line-height: $height;
+            text-align: center;
+            border-radius: 2px;
+
+            @include responsive (Mobile) {
+                $height: 28px;
+                min-width: 36px;
+            }
+        }
+
+        &--active &__link{
+            background-color: $primary-color;
+            color: $white-color;
+
+            &:hover{
+                background-color: #ed5c3f;
+            }
+        }
+    }
+}

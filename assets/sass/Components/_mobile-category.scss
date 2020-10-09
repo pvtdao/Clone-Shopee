@@ -1,0 +1,61 @@
+.mobile-category{
+    display: none;
+
+    @include responsive(Mobile) {
+        display: block;
+    }
+
+    &__list{
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+        max-width: 100%;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+
+    &__item{
+        flex-shrink: 0;
+        border-radius: 4px;
+        margin-right: 10px;
+
+        &:nth-last-of-type(3n){
+            background-color: #87afd8;
+        }
+
+        &:nth-last-of-type(3n + 2){
+            background-color: #76c9bd;
+        }
+
+        &:nth-last-of-type(3n + 1){
+            background-color: #88cf81;
+        }
+
+        &-link{
+            $lineheight: 2rem;
+            display: block;
+            text-decoration: none;
+            color: $white-color;
+            font-size: 1.4rem;
+            line-height: $lineheight;
+            height: calc(#{$lineheight} * 2);
+            overflow: hidden;
+            text-align: center;
+            width: 110px;
+            font-weight: 300;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            padding: 0 6px;
+        }
+    }
+}

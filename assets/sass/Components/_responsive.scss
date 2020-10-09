@@ -1,0 +1,17 @@
+.hide-on-mobile-tablet{
+    @include responsive (MobileTablet){
+        display: none;
+    }
+}
+
+.hide-on-mobile{
+    @include responsive (Mobile){
+        display: none;
+    }
+}
+
+.hide-on-tablet{
+    @include responsive (Tablet){
+        display: none;
+    }
+}
