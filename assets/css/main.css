@@ -1184,10 +1184,10 @@ html {
       font-size: 1.2rem;
       line-height: 1.2rem;
       position: relative;
-      top: -1px; }
+      top: 3px; }
     .product-item__sale-off-label {
       position: relative;
-      top: -10px;
+      top: 0;
       color: #fff;
       font-size: 1.3rem;
       line-height: 1.3rem;
@@ -1238,19 +1238,24 @@ html {
   .footer__list {
     padding-left: 0;
     list-style: none; }
-    .footer__list-item-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 1.2rem;
-      color: #737373;
-      padding: 2px 0; }
-      .footer__list-item-link:hover {
-        color: #ee4d2d; }
-    .footer__list-item-icon {
-      font-size: 1.6rem;
-      margin: -1px 8px 0 0; }
+    .footer__list-item {
+      display: flex; }
+      @media (max-width: 739px) {
+        .footer__list-item {
+          display: unset; } }
+      .footer__list-item-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: #737373;
+        padding: 2px 0; }
+        .footer__list-item-link:hover {
+          color: #ee4d2d; }
+      .footer__list-item-icon {
+        font-size: 1.6rem;
+        margin: -1px 8px 0 0; }
   .footer__download {
     display: flex; }
     @media (max-width: 739px) {

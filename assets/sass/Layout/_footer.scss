@@ -24,6 +24,11 @@
         list-style: none;
 
         &-item{
+            display: flex;
+
+            @include responsive(Mobile) {
+                display: unset;
+            }
 
             &-link{
                 display: flex;
